@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F4F6F9">
+
+    <!-- Header bleu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#185FA5"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PhoneBook Pro"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Répertoire synchronisé"
+            android:textColor="#B5D4F4"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <!-- Compteurs -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/txtTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contacts"
+                android:textSize="11sp"
+                android:textColor="#888780" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="3dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/txtEnvoyes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#27500A" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Envoyés"
+                android:textSize="11sp"
+                android:textColor="#888780" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:orientation="vertical"
+            android:background="@drawable/card_bg"
+            android:padding="10dp">
+            <TextView
+                android:id="@+id/txtEchecs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#633806" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Échecs"
+                android:textSize="11sp"
+                android:textColor="#888780" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Boutons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingBottom="8dp">
+
+        <Button
+            android:id="@+id/btnImporter"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="Importer"
+            android:backgroundTint="#185FA5"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnEnvoyer"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="Envoyer tout"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:textColor="#185FA5" />
+    </LinearLayout>
+
+    <!-- Recherche -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingBottom="10dp">
+
+        <EditText
+            android:id="@+id/champRecherche"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:hint="Nom ou numéro..."
+            android:background="@drawable/input_bg"
+            android:paddingHorizontal="14dp"
+            android:textSize="14sp"
+            android:inputType="text"
+            android:imeOptions="actionSearch" />
+
+        <Button
+            android:id="@+id/btnChercher"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Chercher"
+            android:backgroundTint="#1D9E75"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <!-- Label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONTACTS"
+        android:textSize="11sp"
+        android:textColor="#888780"
+        android:textStyle="bold"
+        android:paddingHorizontal="12dp"
+        android:paddingBottom="6dp" />
+
+    <!-- RecyclerView SEUL, prend tout l'espace restant -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listContacts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="12dp"
+        android:clipToPadding="false" />
+
+</LinearLayout>
