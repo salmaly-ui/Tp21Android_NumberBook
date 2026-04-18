@@ -74,7 +74,7 @@ PhoneBook Pro/
 ## 📥 Installation
 
 ### 1. Base de données
-sql```sql
+```sql
 CREATE DATABASE IF NOT EXISTS phonebook
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
@@ -117,8 +117,8 @@ ipconfig
 Modifier ClientRetrofit.java :
 ```
 private static final String ADRESSE_API =
-"http://192.168.X.X/phonebook-api/api/";```
-
+"http://192.168.X.X/phonebook-api/api/";
+```
 Permissions Android :
 ```
 <uses-permission android:name="android.permission.READ_CONTACTS"/>  
