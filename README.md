@@ -74,7 +74,7 @@ PhoneBook Pro/
 ## 📥 Installation
 
 ### 1. Base de données
-
+sql```sql
 CREATE DATABASE IF NOT EXISTS phonebook
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
@@ -88,7 +88,7 @@ telephone VARCHAR(60) NOT NULL,
 origine VARCHAR(60) DEFAULT 'android',
 date_ajout DATETIME DEFAULT CURRENT_TIMESTAMP
 );
-
+```
 ---
 
 ### 2. Backend PHP
@@ -97,12 +97,12 @@ Copier le projet dans :
 C:\xampp\htdocs\phonebook-api\
 
 Configurer ConnexionBD.php :
-
+```
 private $serveur = 'localhost';
 private $baseDeDonnees = 'phonebook';
 private $login = 'root';
 private $motDePasse = '';
-
+```
 Tester :
 http://localhost/phonebook-api/api/listerPersonnes.php
 
@@ -115,17 +115,17 @@ Trouver IP du PC :
 ipconfig
 
 Modifier ClientRetrofit.java :
-
+```
 private static final String ADRESSE_API =
-"http://192.168.X.X/phonebook-api/api/";
+"http://192.168.X.X/phonebook-api/api/";```
 
 Permissions Android :
-
+```
 <uses-permission android:name="android.permission.READ_CONTACTS"/>  
 <uses-permission android:name="android.permission.INTERNET"/>
 
 <application android:usesCleartextTraffic="true">
-
+```
 ---
 
 ## ▶️ Lancement
